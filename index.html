@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/stiles.css">
+    <title>Inventario</title>
+</head>
+<body>
+    <main class="container">
+        <div class="contenedor">
+            <div class="form">
+                <div class="form_sec">
+                   <h2 class="form_name">login</h2>
+                <div class="form_imput">
+                    <h2 class="form_title">inicar sesion</h2>
+                    <div class="group_imput">
+                        <input type="mail" class="form_input" placeholder="Escribe tu correo" >
+                        <input type="password" class="form_input" placeholder="Escribe tu contraseña">                        
+                    </div>
+                    <div class="btn">                        
+                        <button class="btn_primary" id="start">Iniciar</button>
+                    </div>
+                    <div class="btn">
+                        <button class="enlace" id="recup">Recuperar contraseña</button>
+                    </div>
+                </div> 
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <script>
+
+document.getElementById("start").addEventListener("click", function() {
+    // Call the iniciar() function when the "Iniciar" button is clicked
+    iniciar();
+});
+
+function iniciar() {
+    // Perform the login process
+    // This is where you would typically make an API call to authenticate the user
+    // If successful, you can show a success message
+    swal("Success", "Login successful!", "success")
+    .catch(function(error) {
+        // Handle login errors
+        swal("Error", "An error occurred during login", "error");
+    });
+}
+
+document.getElementById("recup").addEventListener("click", function() {
+    // Call the reset() function when the "Recuperar contraseña" button is clicked
+    reset();
+});
+
+function reset() {
+    // Display a message for password recovery
+    swal("Email Sent", "Please check your email for the recovery link", "info");
+}
+
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
+
+
